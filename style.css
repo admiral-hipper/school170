@@ -1,0 +1,117 @@
+body .navbar .nav-toggler span{
+    width:1em;
+    height:1em;
+    
+}
+html,body{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+}
+body .navbar .logo{
+    font-family: Comic Sans MS,sans-serif;
+    font-size: 1.5em;
+}
+.nav-link{
+    color:white !important;
+}
+body div div .carousel-item{
+    width:100%;
+    width:100%;
+    background-color: rgba(30, 143, 255, 0.377);
+}
+body div div .carousel-item img{
+    margin-left: auto;
+}
+/* body .header-img{
+    width: 100%;
+    background-image: url("image/школа170.jpg");
+    background-size: 100% 200%;
+    background-position:center top;
+    height: 300px;
+} */
+body .main-menu{
+    background-color: rgba(240, 240, 218, 0.438) !important;
+    position: relative;
+    width:100%;
+    box-shadow: 0px 10px 1px dodgerblue,
+    0px 20px 1px yellow;
+    /* margin-bottom: 20px; */
+}
+.logo img{
+    position: relative;
+    border-radius: 50%;
+}
+.nav-link{
+    position: relative;
+    font-size:1.2em;
+    color: black !important;
+  }
+.logo img:hover{
+    transition: all .7s ease .1s;
+}
+.logo span{
+    color:orange;
+    position: relative;
+}
+.logo span:after,.nav-link:after{
+    content:"";
+    position:absolute;
+    opacity: 0;
+    width:0;
+    height:0;
+    border-bottom: 3px solid rgb(177, 59, 59);
+    left:0;
+    bottom:0   ;
+    transition: all .3s ease 0s;
+}
+.logo span:hover:after,.nav-link:hover:after{
+    opacity:1;
+    width:100%;
+    transition: opacity 0s ease 0s, width .4s ease .3s;
+}
+
+.headh{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom:4px solid orange;
+}
+.carousel-control-prev span,.carousel-control-next span{
+    z-index: 3;
+    font-size: 2em;
+    color:rgba(255, 166, 0, 0.7)
+}
+.carousel-control-prev span:hover,.carousel-control-next span:hover{
+    color:orange
+}
+.carousel{
+    padding-right:0
+}
+.card{
+    min-height:35em;
+}
+.footer a span,footer div ul .nav-item .nav-link{
+    color:white !important;
+}
+footer div ul .nav-item .nav-link{
+    font-size: 1em;
+}
+.label-input{
+    font-family: Comic Sans MS, sans-serif;
+}
+#news-textarea,#news-textarea1{
+    height:20em;
+    resize: none;
+}
+.article-form{
+    border: 2px solid black;
+    border-radius: 3%;
+}
+input[type="file"]{
+display: none;
+}
+
+@media (min-width:350px){
+body .navbar .logo{
+    font-size: 2.2em;
+}
+}
