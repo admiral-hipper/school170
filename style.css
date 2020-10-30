@@ -5,7 +5,7 @@ body .navbar .nav-toggler span{
 }
 html,body{
     width:100%;
-    height:100%;
+    
     overflow-x: hidden;
 }
 body .navbar .logo{
@@ -109,7 +109,23 @@ footer div ul .nav-item .nav-link{
 input[type="file"]{
 display: none;
 }
-
+.overlay{
+  display:none;
+  position:fixed;
+  top:0;
+  width:100%;
+  min-height:100%;
+  background:rgba(0,0,0,0.7);
+  opacity:0;
+  z-index:998;
+}
+.overlay.active{
+  display:block;
+  opacity:1;
+}
+.overlay img{
+  z-index:999;
+}
 @media (min-width:350px){
 body .navbar .logo{
     font-size: 2.2em;
