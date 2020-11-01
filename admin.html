@@ -3,113 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap.css">
-    <title>Document</title>
-    <style>
-        .main-menu{
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Admin School 170</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light main-menu">
-        <a href="№" class="logo navbar-brand col-md-5 col-12">
-          <span>Адмін панель</span>
-          </a>
-        <button class="navbar-toggler nav-toggler col-12" type="button" data-target="#navbarsupport" data-toggle="collapse" ><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse col-7" id="navbarsupport">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Головна</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Усі новини</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Усі повідомлення</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a href="#" class="nav-link"></a>
-            </li> -->
-        </ul>
+
+    <div class="jumbotron">
+        <h2 class="text-center mb-3"><span class="headh">Створення новини</span></h2>
+        <div class="container article-form col-12 col-lg-8 mr-auto ml-auto p-5">
+            <form class="form-group needs-validation" id="form-news" action="index.php" novalidate>
+                <label for="title-news" class="w-100 text-center label-input">Назва новини</label>
+                <input id="title-news" required type="text" class="form-control">
+                <label for="news-textarea" class="w-100 text-center label-input mt-2">Новина</label>
+                <textarea name="" required id="news-textarea" class="w-100 mt-1 form-control"></textarea>
+                <label for=""class="w-100 text-center label-input mt-4">Головне фото новини(обов'язково):</label>
+                <label for="image1" class="form-control">Завантажити <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                </svg></label>
+                <input id="image1"required name="image1" type="file" class="form-control-file">
+                <label for=""class="w-100 text-center label-input mt-4">Додаткові фото:</label>
+                <label for="multiimage1" class="form-control">Завантажити <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                </svg></label>
+                <input name="image2[]" id="multiimage1" multiple type="file" class="form-control-file mt-2">
+                <input type="submit" class="btn btn-success col-12 mt-2 ml-auto" value="Створити">
+             </form>
         </div>
-    </nav>
-    <div class="row container-fluid">
-       
-       
- 
-       <div class="card mb-3 ml-2 mt-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="image/DSC_0202.jpg" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Название карточки</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
+        <h2 class="text-center mb-3 mt-5"><span class="headh">Створення повідомлення</span></h2>
+        <div class="container article-form col-12 col-lg-8 mr-auto ml-auto p-5">
+            <form class="form-group needs-validation" id="form-news1" action="{{Route('alert')}}" novalidate>
+                <label for="title-news1" class="w-100 text-center label-input">Назва повіломлення</label>
+                <input id="title-news1" required type="text" class="form-control">
+                <label for="news-textarea1" class="w-100 text-center label-input mt-2">Зміст</label>
+                <textarea name="" required id="news-textarea1" class="w-100 mt-1 form-control"></textarea>
+                <label for=""class="w-100 text-center label-input mt-4">Головне фото повідомлення(необов'язково):</label>
+                <label for="image3" class="form-control">Завантажити <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                </svg></label>
+                <input id="image3" name="imageAtt" type="file" class="form-control-file">
+                <label for=""class="w-100 text-center label-input mt-4">Документи:</label>
+                <label for="multidoc1" class="form-control">Завантажити <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                </svg></label>
+                <input name="attantion-file[]" id="multidoc1" type="file" multiple class="form-control-file mt-2">
+                <!-- <input name="image1" type="file" multiple class="form-control-file mt-2">
+                <input name="image1" type="file" multiple class="form-control-file mt-2"> -->
+                <input type="submit" class="btn btn-success col-12 mt-2 ml-auto" value="Створити">
+             </form>
         </div>
-      </div>
-      <div class="card mb-3 ml-2 mt-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="image/imag.jpg" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Название карточки</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3 ml-2 mt-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="image/main.jpg" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Название карточки</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3 ml-2 mt-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="image/DSC_0202.jpg" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Название карточки</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-        <nav class="mt-4 container-fluid" aria-label="...">
-            <ul class="pagination">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item" aria-current="page">
-                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
-    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><span style="display: none;" class="identif">Орлов Дмитрий 2003</span>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+//         $('#form-news').submit(function(){
+//     if(($('#title-news').val()!="")&&($('#news-textarea').val()!="")&&($('#image1').val()!=null))
+//     return true;
+//     else {
+//        // $(this).addClass('was-validated')
+//         if($('#title-news').val()=="")
+//         document.getElementById('title-news').innerHTML=0
+//         if($('#news-textarea').val()=="")
+//         $('#news-textarea').addClass('was-validated')
+//         if($('#image1').val()=="")
+//         $('#image1').addClass('was-validated')
+//         return false}
+// })
+// $('#form-news1').submit(function(){
+//     if(($('#title-news1').val!=null)&&($('#news-textarea1').val()!=null)&&($('#image3').val()!=null))
+//     return true;
+//     else {
+//         if($('#title-news1').val()==null)
+//         $('#title-news1').addClass('was-validated')
+//         if($('#news-textarea1').val()==null)
+//         $('#news-textarea1').addClass('was-validated')
+//         if($('#image3').val()==null)
+//         $('#image3').addClass('was-validated')
+//         return false}
+// })
+// var forms = document.getElementsByClassName('needs-validation');
+//     // Loop over them and prevent submission
+//     var validation = Array.prototype.filter.call(forms, function(form) {
+//       form.addEventListener('submit', function(event) {
+//         if (form.checkValidity() === false) {
+//           event.preventDefault();
+//           event.stopPropagation();
+//         }
+//         form.classList.add('was-validated');
+//       }, false);
+//     });
+    $('.form-group').submit(function(){
+      abc=true
+      val=$(this).children('.form-control')
+      $.each(val,function(key,item){
+        it=$(item).val()
+        if(($(item).next().attr('type')!='file')||($(item).next().attr('id')=='image1'))
+        if(it==""){
+          $(item).removeClass('is-valid')
+        $(item).addClass('is-invalid')
+        
+        abc=false
+        }
+        else if(it!=""){
+          $(item).removeClass('is-invalid')
+        $(item).addClass('is-valid')
+        if(abc==false)
+        abc=false
+        }
+      })
+      return abc
+    })
+    $('.form-control-file').change(function(){
+      id=$(this).val()
+      $(this).prev('label').val(id)
+    })
+
+</script>
 </body>
 </html>
