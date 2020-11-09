@@ -167,8 +167,45 @@ tr{
     display:block;
 }
 
+.comments{
+    background-color: white;
+
+}
+.comment{
+    padding:0px;
+}
+.head-comment{
+    width:100% !important;
+    padding:0;
+}
+.comment-text{
+    font-size: .8em;
+}
+.head-line{
+    border-bottom: 3px solid rgb(177, 59, 59);
+}
+.forum-profile-image{
+    border-radius: 50%;
+    width:70px;
+}
+.user-name{
+    font-size: 1.2em;
+}
+.chat{
+    color: white;
+}
+.mymessage{
+    font-size: 1.3em;
+    font-family:Comic Sans MS,sans-serif
+}
 @media (min-width:350px){
 body .navbar .logo{
     font-size: 2.2em;
+}
+.comment{
+    padding:0px 15px 0px 15px;
+}
+.head-comment{
+        padding:0px 15px 0px 15px;
 }
 }
