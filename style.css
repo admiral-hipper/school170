@@ -1,3 +1,4 @@
+@import url("fonts/fonts.css");
 body .navbar .nav-toggler span{
     width:1em;
     height:1em;
@@ -9,11 +10,12 @@ html,body{
     overflow-x: hidden;
 }
 body .navbar .logo{
-    font-family: Comic Sans MS,sans-serif;
+   font-family: 'logotextt';
     font-size: 1.5em;
 }
 .nav-link{
     color:white !important;
+   
 }
 body div div .carousel-item{
     width:100%;
@@ -41,11 +43,14 @@ body .main-menu{
 .logo img{
     position: relative;
     border-radius: 50%;
+    width:70px !important;
 }
 .nav-link{
     position: relative;
     font-size:1.2em;
     color: black !important;
+    font-family: days;
+    text-shadow: 2px 1px 1px rgba(165, 42, 42, 0.432);
   }
 .logo img:hover{
     transition: all .7s ease .1s;
@@ -72,7 +77,7 @@ body .main-menu{
 }
 
 .headh{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: days;
     border-bottom:4px solid orange;
 }
 .carousel-control-prev span,.carousel-control-next span{
