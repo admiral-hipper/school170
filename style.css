@@ -4,6 +4,9 @@ body .navbar .nav-toggler span{
     height:1em;
     
 }
+.content{
+    background:white;
+}
 html,body{
     width:100%;
     height:100%;
@@ -50,8 +53,11 @@ body .main-menu{
     font-size:1.2em;
     color: black !important;
     font-family: days;
-    text-shadow: 2px 1px 1px rgba(165, 42, 42, 0.432);
+   
   }
+  .footer-link{
+    font-family: logotextt;
+}
 .logo img:hover{
     transition: all .7s ease .1s;
 }
@@ -174,10 +180,11 @@ tr{
 
 .comments{
     background-color: white;
-
+    
 }
 .comment{
-    padding:0px;
+    margin-left: 0;
+    padding: 15px 0px 15px 0px!important;
 }
 .head-comment{
     width:100% !important;
@@ -187,6 +194,7 @@ tr{
     font-size: .8em;
 }
 .head-line{
+    width: 100%;
     border-bottom: 3px solid rgb(177, 59, 59);
 }
 .forum-profile-image{
@@ -208,7 +216,8 @@ body .navbar .logo{
     font-size: 2.2em;
 }
 .comment{
-    padding:0px 15px 0px 15px;
+    padding: 15px 0px 15px 0px!important;
+    border: 2px double black;
 }
 .head-comment{
         padding:0px 15px 0px 15px;
